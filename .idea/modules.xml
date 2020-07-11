@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Java-web-dev-techjobs-oo.iml" filepath="$PROJECT_DIR$/Java-web-dev-techjobs-oo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../durian-master/durian-master.iml" filepath="$PROJECT_DIR$/../durian-master/durian-master.iml" />
     </modules>
   </component>
 </project>
