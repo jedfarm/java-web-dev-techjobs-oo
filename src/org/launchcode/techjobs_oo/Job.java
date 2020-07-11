@@ -136,6 +136,9 @@ public class Job {
 
         return output;
 
+        //ToDo: Find a way to iterate through the fields without manually create an array
+        // making the toString() method transparent to any future changes in fields.
+
         // I found a couple of solutions online that I tried to adapt but I couldn't.
         //1. Here I succeeded at printing out the properties but not the values.
         //Field [] fields = Job.class.getDeclaredFields();
