@@ -111,6 +111,8 @@ public class Job {
                 this.coreCompetency};
         int emptyFieldCounter = 0;
         String text;
+        
+
         for (int i = 0; i < fieldNames.length; i++){
             if (i == fieldNames.length - 1){
                 emptyLine1 = "";
