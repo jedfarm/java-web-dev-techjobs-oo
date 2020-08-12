@@ -18,13 +18,6 @@ public class Location extends JobField{
     // Custom toString, equals, and hashCode methods:
 
 
-    @Override
-    public String toString() {
-        return "Location{" +
-                "id=" + id +
-                ", value='" + value + '\'' +
-                '}';
-    }
 
     @Override
     public boolean equals(Object o) {

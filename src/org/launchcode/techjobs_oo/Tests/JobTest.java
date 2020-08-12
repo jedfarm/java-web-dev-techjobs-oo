@@ -21,13 +21,13 @@ public class JobTest {
 
     @Before
     public void someJobObjects() {
-         job1 = new Job();
-         job2 = new Job();
-         job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
+          job1 = new Job();
+          job2 = new Job();
+          job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
                  new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
+          job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
                 new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        job5 = new Job("Product tester", new Employer(), new Location("Desert"),
+          job5 = new Job("Product tester", new Employer(), new Location("Desert"),
                 new PositionType("Quality control"), new CoreCompetency("Persistence"));
     }
 
@@ -38,11 +38,11 @@ public class JobTest {
 
     @Test
     public void testJobConstructorSetAllFields(){
-        assertEquals("Product tester", job3.getName());
-        assertEquals("ACME", job3.getEmployer().toString());
-        assertEquals("Desert", job3.getLocation().toString());
-        assertEquals("Quality control", job3.getPositionType().toString());
-        assertEquals("Persistence", job3.getCoreCompetency().toString());
+        assertEquals("Product tester", job4.getName());
+        assertEquals("ACME", job4.getEmployer().toString());
+        assertEquals("Desert", job4.getLocation().toString());
+        assertEquals("Quality control", job4.getPositionType().toString());
+        assertEquals("Persistence", job4.getCoreCompetency().toString());
     }
 
     @Test
@@ -51,19 +51,25 @@ public class JobTest {
     }
 
     @Test
-    public void testToString(){
+    public void testToString1(){
         List<String> myList = new ArrayList<String>(Arrays.asList(job4.toString().split("\n")));
         assertTrue(myList.get(0).isEmpty());
         assertTrue(myList.get(myList.size()-1).equals(" "));
-
+    }
+    @Test
+    public void testToString2(){
+        List<String> myList = new ArrayList<String>(Arrays.asList(job4.toString().split("\n")));
         assertEquals("\n" +
-                "ID: 9\n" +
+                "ID: 19\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +
                 "Position Type: Quality control\n" +
                 "Core Competency: Persistence\n ", job4.toString());
-
+    }
+    @Test
+    public void testToString3(){
         assertEquals("\nOOPS! This job does not seem to exist.\n ", job1.toString());
     }
+
 }
