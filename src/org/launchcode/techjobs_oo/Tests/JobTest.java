@@ -56,11 +56,12 @@ public class JobTest {
         assertTrue(myList.get(0).isEmpty());
         assertTrue(myList.get(myList.size()-1).equals(" "));
     }
+
     @Test
     public void testToString2(){
         List<String> myList = new ArrayList<String>(Arrays.asList(job4.toString().split("\n")));
         assertEquals("\n" +
-                "ID: 19\n" +
+                "ID: 4\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +
@@ -70,6 +71,19 @@ public class JobTest {
     @Test
     public void testToString3(){
         assertEquals("\nOOPS! This job does not seem to exist.\n ", job1.toString());
+    }
+
+    @Test
+    public void testToString4(){
+        List<String> myList = new ArrayList<String>(Arrays.asList(job5.toString().split("\n")));
+        assertEquals("\n" +
+                "ID: 5\n" +
+                "Name: Product tester\n" +
+                "Employer: Data not available\n" +
+                "Location: Desert\n" +
+                "Position Type: Quality control\n" +
+                "Core Competency: Persistence\n ", job5.toString());
+
     }
 
 }
