@@ -1,6 +1,7 @@
 package org.launchcode.techjobs_oo.Tests;
 
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.launchcode.techjobs_oo.*;
 
 import org.junit.Test;
@@ -13,14 +14,14 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class JobTest {
-    Job job1 = null;
-    Job job2 = null;
-    Job job3 = null;
-    Job job4 = null;
-    Job job5 = null;
+    static Job job1 = null;
+    static Job job2 = null;
+    static Job job3 = null;
+    static Job job4 = null;
+    static Job job5 = null;
 
-    @Before
-    public void someJobObjects() {
+    @BeforeClass
+    public static void someJobObjects() {
           job1 = new Job();
           job2 = new Job();
           job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
@@ -30,6 +31,7 @@ public class JobTest {
           job5 = new Job("Product tester", new Employer(), new Location("Desert"),
                 new PositionType("Quality control"), new CoreCompetency("Persistence"));
     }
+    
 
     @Test
     public void testSettingJobId(){
